@@ -22,9 +22,10 @@
 
 /* Размеры с вьюпорта */
 
-html, body {
+body {
 	height: 100%;
 	overflow: auto;
+	background-color: rgb(40, 25, 20);
 }
 
 /* Header */
@@ -93,7 +94,7 @@ main {
 .main__start {
 	display: grid;
 	place-items: center;
-	height: 100%;
+	height: 100vh;
 }
 
 .main__slogan {
@@ -138,11 +139,11 @@ main {
 .main__slogan-background {
     position: absolute;
     z-index: -1;
-    height: 100%;
+    height: 102vh;
     width: 100%;
     background-image: url("../pictures/bg/main_bg.png");
     background-position: center;
-    background-color: rgba(237, 229, 209);
+    background-color: rgba(230, 215, 185);
     background-size: 7.5em;
     filter: blur(1.5px);
     animation: backgroundMove 20s ease-in-out forwards infinite;
@@ -198,7 +199,7 @@ main {
 .main__second-window {
 	position: relative;
 	padding: 12.5vh 7.5vw;
-	background-image: url(../pictures/bg/about_background_image.png);
+	background-image: url(../pictures/bg/about_background_image.jpg);
 	background-size: cover;
 	background-position: center;
 }
@@ -255,6 +256,7 @@ main {
 	font-size: clamp(0.5em, 2vw, 3em);
 	text-align: center;
 	color: rgba(124, 70, 34, 0.95);
+	text-shadow: 0px 0px 2vw rgba(255, 255, 255, 1);
 }
 
 .main__third-window-titles h1::after {
@@ -281,7 +283,7 @@ main {
 	padding: 5%;
 	background-color: white;
 	border-radius: 10%;
-	font-size: clamp(0.5em, 1.5vw, 1.25em);
+	font-size: clamp(0.5em, 1.15vw, 1.5em);
 	box-shadow: 0px 0.8em 1em rgba(0, 0, 0, 0.25);
 	transition: all .35s;
 }
@@ -302,7 +304,7 @@ main {
 	left: -20%;
 	opacity: 0;
 	visibility: hidden;
-	font-size: clamp(0.25em, 1vw, 1.25em);
+	font-size: clamp(0.25em, 1.15vw, 1.5em);
 	transition: all .35s;
 }
 
@@ -323,7 +325,7 @@ main {
 	position: relative;
 	background-image: url(../pictures/bg/background_services.jpg);
 	background-size: cover;
-	padding: 3vw 0;
+	padding: 5vw 0;
 	font-family: FuturaRound;
 	color: rgb(40, 30, 20);
 }
@@ -332,6 +334,7 @@ main {
 	font-size: clamp(0.25em, 2vw, 3em);
 	text-align: center;
 	color: rgba(124, 70, 34, 0.95);
+	text-shadow: 0px 0px 2vw rgba(255, 255, 255, 1);
 }
 
 .main__fourth-window-titles h1::after {
@@ -355,7 +358,8 @@ main {
 	position: relative;
 	width: 100%;
 	margin: 0.5vw auto;
-	font-size: clamp(0.25em, 1vw, 1.25em);
+	font-size: clamp(0.25em, 1.15vw, 1.5em);
+	transition: transform .35s, z-index 1s;
 }
 
 .main__fourth-window-action-button-text {
@@ -372,7 +376,7 @@ main {
 	position: absolute;
 	visibility: hidden;
 	opacity: 0;
-	top: -5%;
+	top: -10%;
 	width: 100%;
 	z-index: 1;
 	padding: 2vw;
@@ -380,6 +384,16 @@ main {
 	border-radius: 1vw;
 	box-shadow: 0px 0.8em 1em rgba(0, 0, 0, 0.15);
 }
+
+.main__fourth-window-action-button:hover {
+	transform: scale(1.05);
+}
+
+.main__fourth-window-action-button:focus-within {
+	transform: scale(1.05);
+	z-index: 1;
+}
+
 
 .main__fourth-window-action-button:focus-within .main__fourth-window-action-text {
 	visibility: visible;
@@ -393,4 +407,59 @@ main {
 	transition: all .35s, z-index 0s;
 	border-radius: 1vw 1vw 0 0;
 	z-index: 2;
+}
+
+/* Футер */
+
+footer {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	box-shadow: 0px -10px 25px rgba(0, 0, 0, 0.25);
+	padding: 2.5vw;
+	background-image: url("../pictures/bg/main_bg.png");
+	background-size: 7.5em;
+	background-position: center;
+	background-color: rgba(222, 178, 124, 1);
+	font-family: FuturaRound;
+}
+
+.footer__company_label {
+	display: grid;
+	grid-template-rows: 1fr 0.5fr;
+	margin: auto;
+	font-size: clamp(0.3em, 1.5vw, 1.5em);
+	filter: drop-shadow(0 0 0.5em rgb(222, 178, 124));
+}
+
+.footer__company-slogan {
+	margin: auto;
+}
+
+.footer__company-logo {
+	width: 14.5em;
+	margin: auto;
+}
+
+.footer__contacts {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: auto;
+	color: rgb(40, 25, 20);
+	font-size: clamp(0.3em, 1.25vw, 1.5em);
+	text-shadow: 0 0 1em rgb(222, 178, 124);
+}
+
+.footer__contacts a {
+	color: rgb(220, 220, 255);
+}
+
+.footer__text-highlight { 
+	color: rgb(80, 50, 40);
+	font-size: clamp(0.3em, 1.5vw, 1.5em);
+}
+
+/* Разделение между секциями (окнами) */
+
+main section {
+	margin: 0.15vw 0;
 }

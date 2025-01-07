@@ -10,18 +10,18 @@
 	<body>
 		<header>
 			<nav class="header__button">
-				<a href="#main">
+				<a href="#main" onclick="location.href='#main'">
 					<img src="pictures/logo/main_logo.png" alt="company logo">
 				</a>
 			</nav>
 			<nav class="header__action-buttons">
-                <a href="#about">О нас</a>
-                <a href="#services">Услуги</a>
-                <a href="#contact">Контакты</a>
+                <a onclick="location.href='#about_us'">О нас</a>
+                <a onclick="location.href='#services'">Услуги</a>
+                <a onclick="location.href='#contacts'">Контакты</a>
 			</nav>
 		</header>
 		<main>
-			<div class="main__start">
+			<section class="main__start" id="main">
 				<div class="main__slogan-background"></div>
 				<div class="main__slogan">
 					<span class="main__slogan-upper-content">Дарим</span>
@@ -32,8 +32,8 @@
 					</div>
 					<span class="main__slogan-bottom-content">выпечкой</span>
 				</div>
-			</div>
-			<div class="main__second-window">
+			</section>
+			<section class="main__second-window" id="about_us">
 		        <div class="main__second-window-text-block">
 		            <div class="main__second-window-titles">
 			            <h1>Наша история</h1>
@@ -42,8 +42,8 @@
 		            	<p>"Хлебушек" - пекарня с большой буквы. История нашего создания началась еще задолго до появление сети "Интернет": всё началось с увлечения одного умельца, который умел пекти очень вкусный хлеб у себя дома, и эти знания передавались в семье, из поколения в поколение. И вот, через какое-то время, он решил создать уютное место, где такие же умельцы как и он могли бы поделиться их невероятно вкусной выпечкой. Так на свет и появилась пекарня "Хлебушек".<br>Для нашей продукции мы используем традиционные рецепты и высококачественные ингредиенты, такие как мука грубого помола, свежие дрожжи, натуральное молоко и яйца от местных фермеров. «Хлебушек» предлагает широкий ассортимент выпечки: хлеб, булочки, пироги, круассаны, печенье и многое другое. Все изделия готовятся вручную и с любовью.
 		            </div>
 		        </div>
-			</div>
-			<div class="main__third-window">
+			</section>
+			<section class="main__third-window">
 				<div class="main__third-window-titles">
 					<h1>Наша выпечка</h1>
 				</div>
@@ -105,8 +105,8 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="main__fourth-window">
+			</section>
+			<section class="main__fourth-window" id="services">
 				<div class="main__fourth-window-titles">
 					<h1>Услуги, предоставляемые<br>нашей компанией</h1>
 				</div>
@@ -132,10 +132,23 @@
 						<p class="main__fourth-window-action-text">Мы помогаем создавать оригинальные рецепты и вкусовые комбинации для вашей продукции. Эта услуга идеально подходит для тех, кто хочет выделиться на рынке или предложить своим клиентам что-то новое. Совместно с вами мы разрабатываем уникальные изделия, которые будут соответствовать современным трендам.</p>
 					</div>
 				</div>
-			</div>
+			</section>
 		</main>
-		<footer>
-			<p><br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>0<br><br><br><br><br><br><br><br><br><br><br><br></p>
+		<footer id="contacts">
+			<div class="footer__company_label">
+				<img class="footer__company-logo" src="pictures/logo/main_logo.png" alt="company_logo">
+				<p class="footer__company-slogan">Тепло и уют - только с нами!</p>
+			</div>
+			<div class="footer__contacts">
+				<div class="footer__address_contact">
+					<p class="footer__text-highlight">Наш адрес:</p>
+					<p>улица Пушкина<br>дом Колотушкина<br>квартира 727</p>
+				</div>
+				<div class="footer__email">
+					<p class="footer__text-highlight">Связаться с нами:</p>
+					<a href="mailto:hlebyshekcorpmail@gmail.com">hlebyshekcorpmail@gmail.com</a>
+				</div>
+			</div>
 		</footer>
 	</body>
 </html>
