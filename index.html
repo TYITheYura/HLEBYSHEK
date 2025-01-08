@@ -17,7 +17,18 @@
 			<nav class="header__action-buttons">
                 <a onclick="location.href='#about_us'">О нас</a>
                 <a onclick="location.href='#services'">Услуги</a>
-                <a onclick="location.href='#contacts'">Контакты</a>
+                <div class="header__howto-popup-button" tabindex="0">
+	                <a>Контакты</a>
+	                <div class="header__howto-popup">
+						<p class="header__howto_text"><span class="highlight">Наша электронная почта:</span><br>hlebyshekcorpmail@gmail.com<br><span class="highlight">Наш номер телефона:</span><br>+7 (912) 345-67-89<br><span class="highlight">Адрес родительского отделения:</span><br>улица Пушкина<br>дом Колотушкина<br>квартира 727</p>
+					</div>
+				</div>
+                <div class="header__howto-popup-button" tabindex="0">
+	                <a>Как заказать?</a>
+	                <div class="header__howto-popup">
+						<p class="header__howto_text">Вы можете приобрести продукцию, позвонив по указанному номеру телефона, отправив запрос на электронную почту или посетив одно из ближайших отделений, где наши сотрудники помогут вам оформить покупку.<br>Ознакомиться с нашей продукцией можно, нажав <a onclick="location.href='#products'">сюда</a>.</p>
+					</div>
+				</div>
 			</nav>
 		</header>
 		<main>
@@ -43,7 +54,7 @@
 		            </div>
 		        </div>
 			</section>
-			<section class="main__third-window">
+			<section class="main__third-window" id="products">
 				<div class="main__third-window-titles">
 					<h1>Наша выпечка</h1>
 				</div>
@@ -135,18 +146,28 @@
 			</section>
 		</main>
 		<footer id="contacts">
-			<div class="footer__company_label">
-				<img class="footer__company-logo" src="pictures/logo/main_logo.png" alt="company_logo">
-				<p class="footer__company-slogan">Тепло и уют - только с нами!</p>
-			</div>
-			<div class="footer__contacts">
-				<div class="footer__address_contact">
-					<p class="footer__text-highlight">Наш адрес:</p>
-					<p>улица Пушкина<br>дом Колотушкина<br>квартира 727</p>
+			<div class="footer__bg-section"></div>
+			<div class="footer__section">
+				<div class="footer__company-label">
+					<img class="footer__company-logo" src="pictures/logo/main_logo.png" alt="company_logo">
+					<p class="footer__company-slogan">Тепло и уют - только с нами!</p>
 				</div>
-				<div class="footer__email">
-					<p class="footer__text-highlight">Связаться с нами:</p>
-					<a href="mailto:hlebyshekcorpmail@gmail.com">hlebyshekcorpmail@gmail.com</a>
+				<div class="footer__contacts">
+					<div class="footer__address_contact">
+						<p class="footer__text-highlight">Наш адрес:</p>
+						<p>улица Пушкина<br>дом Колотушкина<br>квартира 727</p>
+					</div>
+					<div class="footer__contacts-section">
+						<p class="footer__text-highlight">Связаться с нами:</p>
+						<div class="contacts_section">
+							<div class="footer__email">
+								<p>Электронная почта:<br><a href="mailto:hlebyshekcorpmail@gmail.com">hlebyshekcorpmail@gmail.com</a><p>
+							</div>
+							<div class="footer__number">
+								<p>Номер телефона:<br>+7 (912) 345-67-89</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</footer>
