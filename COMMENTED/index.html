@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Мета тег. charset задаёт кодировку символов на странице -->
+		<meta charset="utf-8">
+		<!-- Ещё один мета тег. На этот раз для вьюпорта (name) (области просмотра АКА окна страницы браузера хз как объяснить ебанаврот). в content'е установлены параметры, первый - что-бы ширина области просмотра (вьюпорта) была равна ширине экрана. Удобная штука btw, позволяет сделать кое-какую адаптацию страницы к экранам. Второй парамент задаёт начальный масштаб сайта (1 = 1:1 т.е. без масштабирования) -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Импорт css файла (стили) -->
+		<link rel="stylesheet" href="styles/Styles.css">
+		<!-- Фавикон. Почему type есть? Вообще, это больше привычка, но на деле его указывают для совместимости на более старых браузерах. В новых его можно не юзать  -->
+		<link rel="icon" href="pictures/logo/favicon.png" type="image/png">
+		<!-- импорт джиэса -->
+		<script src="scripts/script.js"></script>
+		<!-- тайтл страницы (вверху во вкладках) -->
+		<title>Хлебушек: Пекарня твоего счастья</title>
+	</head>
+	<body>
+		<header>
+			<!-- nav это тот же div, если прямо очень грубо. Используется для обозначения разделов, где есть какая-либо навигация. Но tbh, можно div'ом заменить, разницы не будет. -->
+			<nav class="header__button">
+				<!-- Почему onclick? Это больше мои приколы т.к. первый семестр всё-таки. На деле его больше используют для того, что-бы у div`а было какое-либо взаимодействие после клика. А так, можно обойтись и простым href'ом-->
+				<a href="#main" onclick="location.href='#main'">
+					<!-- alt юзается для того, что-бы в случае, если файл отсутствует, выводилась эта надпись.  -->
+					<img src="pictures/logo/main_logo.png" alt="company logo">
+				</a>
+			</nav>
+			<nav class="header__action-buttons">
+                <!-- Вот кстати и док-ва, что оно может без onclick работать -->
+                <a href='#about_us'>О нас</a>
+                <a href='#services'>Услуги</a>
+                <!-- tabindex даёт возможность "выделять" элемент с помощью tab`а. Ну а ещё приятный бонус - использовать focus-within в css, что-бы держать фокус на элементе (делать его активным). Значение 0 - элемент выделяется табом и учавствует в навигации -->
+                <div class="header__howto-popup-button" tabindex="0">
+	                <a>Контакты</a>
+	                <div class="header__howto-popup">
+						<!-- А чё тут не понятного? Абзац, спан (строчный элемент, которым можно выделить надпись и задать ей стили в css), br (перенос текста). Для класса highlight в css применяются стили. -->
+						<p class="header__howto_text"><span class="highlight">Наша электронная почта:</span><br>hlebyshekcorpmail@gmail.com<br><span class="highlight">Наш номер телефона:</span><br>+7 (912) 345-67-89<br><span class="highlight">Адрес родительского отделения:</span><br>улица Пушкина<br>дом Колотушкина<br>квартира 727</p>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<!-- section - тот же div, только в нём обязательно должны быть h элементы (h1, h2, h3) (которых ИМЕННО тут нет, но можно вместо span использовать h1 в некоторых местах. Пример указан, т.е. код уже подредачен). Ими удобнее "разделение" делать -->
+			<!-- id'шник используется для href`ов в хедере (что-бы можно было переходить к этому элементу) -->
+			<!-- классы юзаю для стилей, ну и ещё в js некоторые упоминаю. В остальном же, дальше "код" повторяет сам себя. Всё те же теги, классы и т.п. -->
+			<section class="main__start" id="main">
+				<div class="main__slogan-background"></div>
+				<div class="main__slogan">
+					<h1 class="main__slogan-upper-content">Дарим</h1>
+					<div class="main__slogan-center-content">
+						<span>тепло</span>
+						<span>уют</span>
+						<span>улыбку</span>
+					</div>
+					<h1 class="main__slogan-bottom-content">выпечкой</h1>
+				</div>
+			</section>
+			<section class="main__second-window" id="about_us">
+		        <div class="main__second-window-text-block">
+		            <div class="main__second-window-titles">
+			            <h1>Наша история</h1>
+			        </div>
+		            <div class="main__second-window-text">
+		            	<p>"Хлебушек" - пекарня с большой буквы. История нашего создания началась еще задолго до появление сети "Интернет": всё началось с увлечения одного умельца, который умел пекти очень вкусный хлеб у себя дома, и эти знания передавались в семье, из поколения в поколение. И вот, через какое-то время, он решил создать уютное место, где такие же умельцы как и он могли бы поделиться их невероятно вкусной выпечкой. Так на свет и появилась пекарня "Хлебушек".<br>Для нашей продукции мы используем традиционные рецепты и высококачественные ингредиенты, такие как мука грубого помола, свежие дрожжи, натуральное молоко и яйца от местных фермеров. «Хлебушек» предлагает широкий ассортимент выпечки: хлеб, булочки, пироги, круассаны, печенье и многое другое. Все изделия готовятся вручную и с любовью.
+		            </div>
+		        </div>
+			</section>
+			<section class="main__third-window" id="products">
+				<div class="main__third-window-titles">
+					<h1>Наша выпечка</h1>
+				</div>
+				<div class="main__third-window-products">
+					<div class="main__third-window-product">
+						<img src="pictures/products/bread.jpg" alt="Хлеб">
+						<p>Хлеб</p>
+						<div class="main__third-window-product-info">
+							<p>Свежий и ароматный хлеб с хрустящей корочкой и мягким, пышным мякишем. Состав: пшеничная мука, вода, дрожжи, соль, сахар, растительное масло.</p>
+						</div>
+					</div>
+					<div class="main__third-window-product">
+						<img src="pictures/products/croissant.jpg" alt="Круассан">
+						<p>Круассаны</p>
+						<div class="main__third-window-product-info">
+							<p>Мягкая и вкусная булочка с легким сладким вкусом и аппетитной текстурой. Состав: пшеничная мука, сахар, дрожжи, молоко, масло.</p>
+						</div>
+					</div>
+					<div class="main__third-window-product">
+						<img src="pictures/products/bun.jpg" alt="Булочка">
+						<p>Булочки</p>
+						<div class="main__third-window-product-info">
+							<p>Мягкая и вкусная булочка с легким сладким вкусом и аппетитной текстурой. Состав: пшеничная мука, сахар, дрожжи, молоко, масло.</p>
+						</div>
+					</div>
+					<div class="main__third-window-product">
+						<img src="pictures/products/cookie.jpg" alt="Печенье">
+						<p>Печенья</p>
+						<div class="main__third-window-product-info">
+							<p>Хрустящее печенье с разнообразными начинками, идеально подходящее к чаю. Состав: мука, сахар, масло, яйца, ваниль.</p>
+						</div>
+					</div>
+					<div class="main__third-window-product">
+						<img src="pictures/products/donut.jpg" alt="Пончик">
+						<p>Пончики</p>
+						<div class="main__third-window-product-info">
+							<p>Нежные пончики с воздушной серединой и сахарной глазурью. Состав: пшеничная мука, сахар, яйца, молоко, растительное масло.</p>
+						</div>
+					</div>
+					<div class="main__third-window-product">
+						<img src="pictures/products/pita.jpg" alt="Лаваш">
+						<p>Лаваши</p>
+						<div class="main__third-window-product-info">
+							<p>Тонкий и мягкий лаваш, идеален для закусок и горячих блюд. Состав: пшеничная мука, вода, соль, дрожжи.</p>
+						</div>
+					</div>
+					<div class="main__third-window-product">
+						<img src="pictures/products/pie.jpg" alt="Пирог">
+						<p>Пироги</p>
+						<div class="main__third-window-product-info">
+							<p>Вкусные пироги с разнообразными начинками: мясо, овощи, ягоды или творог. Состав: мука, яйца, начинка (по выбору), масло, дрожжи.</p>
+						</div>
+					</div>
+					<div class="main__third-window-product">
+						<img src="pictures/products/crackers.jpg" alt="Крекеры">
+						<p>Крекеры</p>
+						<div class="main__third-window-product-info">
+							<p>Хрустящие крекеры с нежной текстурой и легким соленым вкусом. Состав: пшеничная мука, соль, растительное масло, дрожжи.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main__fourth-window" id="services">
+				<div class="main__fourth-window-titles">
+					<h1>Услуги, предоставляемые<br>нашей компанией</h1>
+				</div>
+				<div class="main__fourth-window-actions">
+					<div class="main__fourth-window-action-button" tabindex="0">
+						<p class="main__fourth-window-action-button-text">Индивидуальные заказы</p>
+						<p class="main__fourth-window-action-text">Компания предоставляет возможность заказать выпечку, полностью соответствующую вашим предпочтениям. Это может быть уникальный рецепт, особая форма или необычное оформление изделия. Мы учитываем все ваши пожелания, чтобы создать продукт, идеально подходящий для вас.</p>
+					</div>
+					<div class="main__fourth-window-action-button" tabindex="0">
+						<p class="main__fourth-window-action-button-text">Оптовые поставки</p>
+						<p class="main__fourth-window-action-text">Мы предлагаем регулярные поставки мучных изделий высокого качества для кафе, ресторанов, магазинов и других организаций. Ассортимент включает хлеб, круассаны, пироги и другие изделия, адаптированные под ваши потребности. Гибкие условия сотрудничества и строгий контроль сроков доставки обеспечивают надежность.</p>
+					</div>
+					<div class="main__fourth-window-action-button" tabindex="0">
+						<p class="main__fourth-window-action-button-text">Оформление событий</p>
+						<p class="main__fourth-window-action-text">Создаем выпечку для любых мероприятий – от свадеб до корпоративов. Творческие подходы к оформлению и возможность выбора вкусовых сочетаний позволяют сделать вашу выпечку не только вкусной, но и запоминающейся частью праздника. Мы также предлагаем тематические наборы и изделия с логотипами.</p>
+					</div>
+					<div class="main__fourth-window-action-button" tabindex="0">
+						<p class="main__fourth-window-action-button-text">Доставка на дом</p>
+						<p class="main__fourth-window-action-text">Наша свежая и ароматная выпечка может быть доставлена прямо к вашему порогу. Это удобно для тех, кто ценит время и хочет насладиться горячими изделиями без похода в магазин. Гарантируем оперативность и сохранение качества при транспортировке.</p>
+					</div>
+					<div class="main__fourth-window-action-button" tabindex="0">
+						<p class="main__fourth-window-action-button-text">Разработка рецептур</p>
+						<p class="main__fourth-window-action-text">Мы помогаем создавать оригинальные рецепты и вкусовые комбинации для вашей продукции. Эта услуга идеально подходит для тех, кто хочет выделиться на рынке или предложить своим клиентам что-то новое. Совместно с вами мы разрабатываем уникальные изделия, которые будут соответствовать современным трендам.</p>
+					</div>
+					<div class="main__fourth-window-action-button" tabindex="0">
+						<p class="main__fourth-window-action-button-text">Варианты оформления заказа</p>
+						<p class="main__fourth-window-action-text">Вы можете приобрести продукцию, позвонив по указанному номеру телефона, отправив запрос на электронную почту или посетив одно из ближайших отделений, где наши сотрудники помогут вам оформить покупку. Узнать более подробно о нашей продукции можно в разделе <a class="highlight" onclick="location.href='#products'">"Наша выпечка"</a>.</p>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer id="contacts">
+			<div class="footer__bg-section"></div>
+			<div class="footer__section">
+				<div class="footer__company-label">
+					<img class="footer__company-logo" src="pictures/logo/main_logo.png" alt="company_logo">
+					<p class="footer__company-slogan">Тепло и уют - только с нами!</p>
+				</div>
+				<div class="footer__contacts">
+					<div class="footer__address_contact">
+						<p class="footer__text-highlight">Наш адрес:</p>
+						<p>улица Пушкина<br>дом Колотушкина<br>квартира 727</p>
+					</div>
+					<div class="footer__contacts-section">
+						<p class="footer__text-highlight">Связаться с нами:</p>
+						<div class="contacts_section">
+							<div class="footer__email">
+								<p>Электронная почта:<br><a href="mailto:hlebyshekcorpmail@gmail.com">hlebyshekcorpmail@gmail.com</a></p>
+							</div>
+							<div class="footer__number">
+								<p>Номер телефона:<br>+7 (912) 345-67-89</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
+
+
